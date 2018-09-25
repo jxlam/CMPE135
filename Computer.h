@@ -23,10 +23,11 @@ public:
 		Scissors = 3;
 
 	}
-	int setCompChoice(int rand_compchoice) {
+
+	/*int setCompChoice(int rand_compchoice) {
 		compchoice = (rand() % 3) + 1;
 
-	}
+	}*/
 	int getCompChoice() {
 		compchoice = (rand() % 3) + 1;
 
