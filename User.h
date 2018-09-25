@@ -22,13 +22,13 @@ public:
 			cout << "Type 1 for Rock, 2 for Paper, or 3 for Scissors" << endl;
 			cin >> userchoice;
 			if(userchoice == 1) {
-				cout << "The user choice is " << userchoice << " which is Rock." << endl;
+				cout << "The user's choice is " << userchoice << " which is Rock." << endl;
 			}
 			else if(userchoice == 2) {
-				cout << "The user choice is " << userchoice << " which is Paper." << endl;
+				cout << "The user's choice is " << userchoice << " which is Paper." << endl;
 			}
 			else if(userchoice == 3){
-				cout << "The user choice is " << userchoice << " which is Scissors." << endl;
+				cout << "The user's choice is " << userchoice << " which is Scissors." << endl;
 			}
 			if (!(userchoice==1 || userchoice==2 || userchoice==3)){
 				cout << "Invalid Option! " << endl;
