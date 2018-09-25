@@ -1,9 +1,4 @@
-/*
- * Computer.h
- *
- *  Created on: Sep 24, 2018
- *      Author: aidenchan
- */
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -18,8 +13,6 @@ private:
 	int Rock;
 	int Paper;
 	int Scissors;
-	int Upper_bound;
-	int Lower_bound;
 
 
 public:
@@ -28,16 +21,14 @@ public:
 		Rock = 1;
 		Paper = 2;
 		Scissors = 3;
-		Upper_bound = 3;
-		Lower_bound = 1;
 
 	}
 	int setCompChoice(int rand_compchoice) {
-		compchoice = (rand() % Upper_bound) + Lower_bound;
+		compchoice = (rand() % 3) + 1;
 
 	}
 	int getCompChoice() {
-		compchoice = (rand() % Upper_bound) + Lower_bound;
+		compchoice = (rand() % 3) + 1;
 
 
 		if(compchoice == 1) {
@@ -51,6 +42,7 @@ public:
 		}
 
 	}
+
 
 };
 
