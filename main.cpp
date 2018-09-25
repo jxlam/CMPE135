@@ -24,35 +24,35 @@ int main() {
 	e = u.getUserChoice();
 	if(a == 1) {
 		if (e==1){
-			cout << "Computer chose 'ROCK'... Tied!" << endl;
+			cout << "The computer's choice is rock. Tied!" << endl;
 		}
 		if (e==2){
-			cout << "Computer chose 'ROCK'... You win!" << endl;
+			cout << "The computer's choice is rock. You win!" << endl;
 		}
 		if (e==3){
-			cout << "Computer chose 'ROCK'... You lose!" << endl;
+			cout << "The computer's choice is rock. You lose!" << endl;
 		}
 	}
 	else if(a == 2) {
 		if (e==1){
-			cout << "Computer chose 'PAPER'... You lose!" << endl;
+			cout << "The computer's choice is paper. You lose!" << endl;
 		}
 		if (e==2){
-			cout << "Computer chose 'PAPER'... Tied!" << endl;
+			cout << "The computer's choice is paper. Tied!" << endl;
 		}
 		if (e==3){
-			cout << "Computer chose 'PAPER'... You win!" << endl;
+			cout << "The computer's choice is paper. You win!" << endl;
 		}
 	}
 	else if(a == 3){
 		if (e==1){
-			cout << "Computer chose 'SCISSORS'... You win!" << endl;
+			cout << "The computer's choice is scissors. You win!" << endl;
 		}
 		if (e==2){
-			cout << "Computer chose 'SCISSORS'... You lose!" << endl;
+			cout << "The computer's choice is scissors. You lose!" << endl;
 		}
 		if (e==3){
-			cout << "Computer chose 'SCISSORS'... Tied!" << endl;
+			cout << "The computer's choice is scissors. Tied!" << endl;
 		}
 	}
 	else {
