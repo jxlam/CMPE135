@@ -1,9 +1,3 @@
-/*
- * User.h
- *
- *  Created on: Sep 24, 2018
- *      Author: aidenchan
- */
 #include <iostream>
 using namespace std;
 #ifndef USER_H_
@@ -24,20 +18,24 @@ public:
 	}
 	void setUserChoice(int uChoice) {
 			userchoice = uChoice;
-				cout << "Welcome to the game Jan Ken Po." << endl;
-				cout << "Type 1 for Rock, 2 for Paper, or 3 for Scissors" << endl;
-				cin >> userchoice;
-				if(userchoice == 1) {
-					cout << "The user choice is " << userchoice << " which is Rock." << endl;
+			//cout << "Welcome to the game Jan Ken Po." << endl;
+			cout << "Type 1 for Rock, 2 for Paper, or 3 for Scissors" << endl;
+			cin >> userchoice;
+			if(userchoice == 1) {
+				cout << "The user choice is " << userchoice << " which is Rock." << endl;
+			}
+			else if(userchoice == 2) {
+				cout << "The user choice is " << userchoice << " which is Paper." << endl;
+			}
+			else if(userchoice == 3){
+				cout << "The user choice is " << userchoice << " which is Scissors." << endl;
+			}
+			if (!(userchoice==1 || userchoice==2 || userchoice==3)){
+				cout << "Invalid Option! " << endl;
+				exit(1);
 				}
-				else if(userchoice == 2) {
-					cout << "The user choice is " << userchoice << " which is Paper." << endl;
-				}
-				else {
-					cout << "The user choice is " << userchoice << " which is Scissors." << endl;
-				}
+			}
 
-	}
 	int getUserChoice() {
 		if(userchoice == 1) {
 			return Rock;
