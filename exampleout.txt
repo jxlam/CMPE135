@@ -1,0 +1,46 @@
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+1
+The user choice is 1 which is Rock.
+The computer is going to make a choice
+Computer chose 'PAPER'... You lose!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+2
+The user choice is 2 which is Paper.
+The computer is going to make a choice
+Computer chose 'PAPER'... Tied!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+3
+The user choice is 3 which is Scissors.
+The computer is going to make a choice
+Computer chose 'SCISSORS'... Tied!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+1
+The user choice is 1 which is Rock.
+The computer is going to make a choice
+Computer chose 'SCISSORS'... You win!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+2
+The user choice is 2 which is Paper.
+The computer is going to make a choice
+Computer chose 'PAPER'... Tied!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+1
+The user choice is 1 which is Rock.
+The computer is going to make a choice
+Computer chose 'SCISSORS'... You win!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+2
+The user choice is 2 which is Paper.
+The computer is going to make a choice
+Computer chose 'ROCK'... You win!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+3
+The user choice is 3 which is Scissors.
+The computer is going to make a choice
+Computer chose 'SCISSORS'... Tied!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
+1
+The user choice is 1 which is Rock.
+The computer is going to make a choice
+Computer chose 'SCISSORS'... You win!
+Type 1 for Rock, 2 for Paper, or 3 for Scissors
