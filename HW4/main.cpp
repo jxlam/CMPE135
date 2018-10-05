@@ -8,6 +8,14 @@
 using namespace std;
 
 	int main() {
+
+		ofstream fout;
+
+		fout.open("output.txt", ofstream::app);
+ 	 	if(fout.fail()) {
+ 	 	cout << "Output file failed" << endl;
+ 	 	}
+
 	int algorithm_choice;
 	int computerchoice;
 	int rand_compchoice;
@@ -23,9 +31,6 @@ using namespace std;
 	User u;
 //	MachineLearning machine;
 	//Winner w;
-
-	ifstream fin;
-	ofstream fout;
 
 
 	for (int n=20; n>0; n--){
@@ -88,14 +93,11 @@ using namespace std;
 
 	}
  	else if(algorithm_choice == 8) {
- 		fout.open("output.txt");
- 	 	if(fout.fail()) {
- 	 	cout << "Output file failed" << endl;
- 	 	}
+
  		u.makechoice();
  	 	a = u.getUserChoice();
 
-	 	 	if(n < 5) {
+	 	 	if(n < 6) {
 	 	 		cout <<"Testing n < 5, a = " << a << endl;
 	 	 		fout << a;
 	 	 	}
