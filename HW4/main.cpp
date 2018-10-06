@@ -12,10 +12,15 @@ using namespace std;
 	int main() {
 
 		ofstream fout;
+		ofstream fout2;
 
 		fout.open("output.txt", ofstream::app);
  	 	if(fout.fail()) {
- 	 	cout << "Output file failed" << endl;
+ 	 		cout << "Output file failed" << endl;
+ 	 	}
+ 	 	fout2.open("outputRandom.txt", ofstream::app);
+ 	 	if(fout2.fail()) {
+ 	 	 	cout << "Output file failed" << endl;
  	 	}
 
 	int algorithm_choice;
@@ -41,6 +46,14 @@ using namespace std;
 	for (int n=20; n>0; n--){
 
  	if(algorithm_choice == 7) {
+
+ 		if(n < 6) {
+ 		 	 		cout <<"Testing n < 5, a = " << a << endl;
+ 		 	 		fout2 << a;
+ 		 	 	}
+ 		 	 	if(n == 1) {
+ 		 	 		fout2 << endl;
+ 		 	 	}
 
  		u.makechoice();
  		a = u.getUserChoice();
@@ -183,6 +196,8 @@ using namespace std;
 
 
 	}
+	fout.close();
+	fout2.close();
 	if (userPoints>compPoints)
 	{
 		cout << "Player got " << userPoints << " points and the Computer got " << compPoints << " points. Player wins!"<<endl;
