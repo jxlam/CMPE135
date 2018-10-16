@@ -1,6 +1,7 @@
 #include "ButtonPanel.h"
 
 void ButtonPanel::initialize() {
+	for (int n=20; n>0; n--){
 	wxSizer *sz = new wxBoxSizer(wxVERTICAL);
 	wxSizer *round_sz = new wxBoxSizer(wxVERTICAL);
 	wzSizer *comp_sz = new wxBoxSizer(wxVERTICAL);
@@ -163,6 +164,7 @@ void ButtonPanel::initialize() {
            ties_sz->AddSpacer(20);
            SetTiesSizer(ties_sz);
 
+	}
 
 }
 
