@@ -15,9 +15,9 @@ Game_Frame::Game_Frame(const wxString& title)
 {
     init();
 
-    wxSize size = GetSize();
-    size.SetWidth (size.GetWidth() + SIDE_MARGINS);
-    SetSize(size);
+    wxSize sz = GetSize();
+    sz.SetWidth (sz.GetWidth() + SIDE_MARGINS);
+    SetSize(sz);
 }
 
 Game_Frame::~Game_Frame()
@@ -40,39 +40,38 @@ void Game_Frame::init_menu_bar()
     myExit->Append(RPS_Quit,  "E&xit\tAlt-X", "Quit program");
 
     wxMenu *myAbout = new wxMenu;
-    myAbout->Append(RPS_About, "&About\tF1",   "Show about dialog");
+    myAbout->Append(RPS_About, "&About/tF1", "Welcome to Jan Ken Po");
 
+    wxMenu *myNewGame = new wxMenu;		//create NewGame menu icon
+    	myNewGame->Append(RPS_NewGame, "NewGame\tF2", "Starting New Game");
+    
     wxMenuBar *menuBar = new wxMenuBar();
     menuBar->Append(myExit, "&File");
-    menuBar->Append(helpMenu, "&Help");
+    menuBar->Append(myAbout, "&About");
+    menuBar->Append(myNewGame, "&File");
+    
     SetMenuBar(menuBar);
+    SetStatusText("Welcome to Jan Ken Po!");	//status message
 }
 
 void Game_Frame::init_sizer()
 {
-    wxSizer *frame_sizer = new wxBoxSizer(wxVERTICAL);
+	wxSizer *frame_sz = new wxBoxSizer(wxVERTICAL);
 
-    frame_sizer->AddSpacer(20);
-    frame_sizer->Add(button_panel, 0, wxALIGN_CENTER, 0);
+	frame_sz->AddSpacer(20);
+	frame_sz->Add(button_panel, 0, wxALIGN_CENTER, 0);
 
-    SetSizerAndFit(frame_sizer);
+	SetSizerAndFit(frame_sz);
 }
 
-void Game_Frame::on_about(wxCommandEvent& WXUNUSED(event))
+void Game_Frame::About(wxCommandEvent& WXUNUSED(event))
 {
-    wxMessageBox(wxString::Format(
-                    "This is a button demo\n"
-                    "built with %s\n"
-                    "and running under %s.",
-                    wxVERSION_STRING,
-                    wxGetOsDescription()
-                ),
-                "About the button demo",
-                wxOK | wxICON_INFORMATION,
-                this);
+	wxMessageBox(wxString::Format("This is Jan Ken Po \n. Enjoy the game!\n"),
+			"About Jan Ken Po", wxOK | wxICON_INFORMATION, this);
+	}
 }
 
-void Game_Frame::on_quit(wxCommandEvent& WXUNUSED(event))
+void Game_Frame::myExit(wxCommandEvent& WXUNUSED(event))
 {
-    Close(true);  // true is to force the frame to close
+    Close(true);  // exit the game if true
 }
