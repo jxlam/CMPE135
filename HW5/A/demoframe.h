@@ -9,6 +9,7 @@ public:
 	virtual ~Game_Frame();
 	void About(wxCommandEvent &event);
 	void myExit(wxCommandEvent &event);
+	void NewGame(wxCommandEvent &event);
 private:
 	wxDECLARE_EVENT_TABLE();
 	ButtonPanel *button_panel;
@@ -19,9 +20,7 @@ private:
 };
 enum {
 	RPS_Quit = wxID_EXIT,
-	RPS_ABOUT = wxID_ABOUT,
-	RPS_NewGame = wxID_NEWGAME
-		
+	RPS_ABOUT = wxID_ABOUT
 };
 
 
