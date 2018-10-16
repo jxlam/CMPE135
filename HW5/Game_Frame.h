@@ -9,10 +9,10 @@
 class Game_Frame : public wxFrame
 {
 public:
-    Game_Frame(const wxString& title, const wxPoint &point, const wxSize &size); //constructor
+    Game_Frame(const wxString& title); //constructor
     virtual ~Game_Frame(); //destructor
     void About(wxCommandEvent& event); //event handler for About memu item
-    void Exit(wxCommandEvent& event);
+    void myExit(wxCommandEvent& event);
 
 private:
     wxDECLARE_EVENT_TABLE(); // The event table that maps events to their handlers.
@@ -25,7 +25,7 @@ private:
 // IDs for the menu commands.
 enum
 {
-    RPS_Quit  = wxID_EXIT,
+    RPS_Exit  = wxID_EXIT,
     RPS_About = wxID_ABOUT
 };
 
