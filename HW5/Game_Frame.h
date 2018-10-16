@@ -27,6 +27,7 @@ enum
 {
     RPS_Exit  = wxID_EXIT,
     RPS_About = wxID_ABOUT
+	RPS_NewGame = wxID_NEWGAME
 };
 
 #endif /* DEMOFRAME_H_ */
