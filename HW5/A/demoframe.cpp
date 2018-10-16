@@ -86,4 +86,8 @@ void Game_Frame::About(wxCommandEvent &WXUNUSED(event)) {	//About message
 void Game_Frame::myExit(wxCommandEvent& WXUNUSED(event)) {	//exit the game if true
 	Close(true);
 }
+void Game_Frame::NewGame(wxCommandEvent &WXUNUSED(event)) {	//create a new game
+	wxMessageBox(wxString::Format("Creating a new game.\n"), "New Game", wxOK | wxICON_INFORMATION, this);
+
+}
 
