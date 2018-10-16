@@ -19,7 +19,9 @@ private:
 };
 enum {
 	RPS_Quit = wxID_EXIT,
-	RPS_ABOUT = wxID_ABOUT
+	RPS_ABOUT = wxID_ABOUT,
+	RPS_NewGame = wxID_NEWGAME
+		
 };
 
 
