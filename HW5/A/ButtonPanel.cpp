@@ -1,7 +1,7 @@
 #include "ButtonPanel.h"
 
 void ButtonPanel::initialize() {
-	for (int n=20; n>0; n--){
+
 	wxSizer *sz = new wxBoxSizer(wxVERTICAL);
 	wxSizer *round_sz = new wxBoxSizer(wxVERTICAL);
 	wzSizer *comp_sz = new wxBoxSizer(wxVERTICAL);
@@ -166,7 +166,6 @@ void ButtonPanel::initialize() {
 
 	}
 
-}
 
 void ButtonPanel::rock(wxCommandEvent& event) {		//Human chooses:
 	update_button_choice_text(ROCK);
