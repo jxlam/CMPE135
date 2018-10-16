@@ -37,7 +37,7 @@ void Game_Frame::init()
 void Game_Frame::init_menu_bar()
 {
     wxMenu *myExit = new wxMenu;
-    myExit->Append(RPS_Quit,  "E&xit\tAlt-X", "Quit program");
+    myExit->Append(RPS_Exit,  "E&xit\tAlt-X", "Quit program");
 
     wxMenu *myAbout = new wxMenu;
     myAbout->Append(RPS_About, "&About/tF1", "Welcome to Jan Ken Po");
