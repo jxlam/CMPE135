@@ -105,7 +105,7 @@ public:
 
 };
 
-class AddStrategy : public LotteryTypes {	//Triple 7 game
+class AddStrategy : public LotteryTypes {	//Triple 10 game
 public:
 	~AddStrategy() {}
 
@@ -113,7 +113,7 @@ public:
 		int first;
 		int second;
 		int third;
-		cout << "Doing Triple Seven algorithm for lottery" << endl;
+		cout << "Doing Triple Tens algorithm for lottery" << endl;
 		TripleTensStrat(first, second, third);
 		//choose 3 numbers, if adds up to winning number.. then win
 	}
