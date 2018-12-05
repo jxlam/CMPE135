@@ -1,10 +1,3 @@
-//============================================================================
-// Name        : CMPE.cpp
-// Author      : aiden chan
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
 
 #include <iostream>
 #include <stdio.h>
@@ -30,7 +23,7 @@ public:
 		int winning_number;
 		int frequency;
 		int retry;
-		cout << "Doing random algorithm for lottery" << endl;
+		cout << "You have chosen the random number lottery" << endl;
 		RandStrat(lotto_number, winning_number, frequency, retry);
 
 	}
@@ -41,7 +34,7 @@ public:
 		int frequency;
 		int retry;
 		ofstream fout;
-		fout.open("output.txt", ofstream::app);
+		fout.open("output.txt", ofstream::app); //opens frequency of winning number output file
 		if(fout.fail()) {
 			cout << "Output file failed" << endl;
 		}
@@ -69,22 +62,26 @@ public:
 			cout << "You won $8 billion!" << endl;
 		}
 		else {
-			cout << "You are not a winner. Better luck next time..." << endl;
+			cout << "You are not a winner." << endl;
 		}
 	}
 
 	int RandStrat(int lotto_number, int winning_number, int frequency, int retry) {
 		//Playing the Lottery: Random number between 1-100
-		cout << "You have chosen the random number lottery" << endl;
 		process();
 
 		retry = rand() % 10 + 1;
-		cout << "You need a retry value of 1 to play again for free!" << endl;
+		cout << "You get another chance of a free retry. You need a retry value of 1 to play again! Good luck!" << endl;
 		cout << "Your retry value is: " << retry << endl;
 
 		if(retry == 1) {
+			cout << "Congrats! You got another chance." << endl;
 			process();
 
+		}
+
+		if(retry!=1){
+			cout << "Sorry! Better luck next time..." << endl;
 		}
 	}
 
@@ -114,17 +111,17 @@ public:
 				third = rand() % 10 + 1;
 				if(third == 10) {
 					cout << "Your third number is " << third << "!" << endl;
-					cout << "You won $8 billion!" << endl;
+					cout << "You won $8 billion! Congratulations!" << endl;
 				}
 				else {
 					cout << "Your third number is " << third << endl;
 					cout << "Better luck next time..." << endl;
 				}
 			}
-			else {
-				cout << "Your second number is " << second << endl;
-				cout << "Better luck next time..." << endl;
-			}
+		else {
+			cout << "Your second number is " << second << endl;
+			cout << "Better luck next time..." << endl;
+		}
 		}
 		else {
 			cout << "Your first number is " << first << endl;
@@ -164,47 +161,52 @@ int main() {
 		int lottery_game;
 
 		//Age Confirmation
-		cout << "Welcome to the Mega Billions Lottery with the current jackpot of $8 billion" << endl;
-		cout << "You must be over 18 to play" << endl;
-		cout << "Press 1 if you are over 18 otherwise press any other key" << endl;
+		cout << "Welcome to the Mega Billions Lottery with the current jackpot of $8 billion!" << endl;
+		cout << "You must be 18 or over to play." << endl;
+		cout << "Press 1 if you are 18 or over. Otherwise, please press any other key to exit the game." << endl;
 		cin >> valid_age;
 			if(valid_age == 1) {
 				cout << "You are eligible to play!" << endl;
 
 			}
 			else {
-				cout << "You are not eligible to play!" << endl;
+				cout << "You are not eligible to play! Sorry!" << endl;
 				exit(0);
 			}
 
 		//Ticket Purchase
 		cout << "Lottery tickets are $500 each. Would you like to purchase one?" << endl;
-		cout << "Press 1 if you would like to purchase one otherwise press any other key" << endl;
+		cout << "Press 1 if you would like to purchase one. Otherwise, press any other key" << endl;
 		cin >> ticket_purchase;
 			if(ticket_purchase == 1) {
-				cout << "You have purchased one lottery ticket" << endl;
+				cout << "You have purchased one lottery ticket." << endl;
 			}
 			else {
-				cout << "You have decided against purchasing a ticket" << endl;
+				cout << "You have decided against purchasing a ticket. Goodbye!" << endl;
 				exit(0);
 			}
 
 		Context *context = new Context();
-		cout << "There are two types of Lottery games available" << endl;
-		cout << "Press 1 for random number or press 2 for Triple Tens" << endl;
+		cout << "There are two types of Lottery games available. Which one would you like?" << endl;
+		cout << "Press 1 for Random Number or press 2 for Triple Tens." << endl;
 		cin >> lottery_game;
 
+
+		//random number
 		if(lottery_game == 1) {
 			RandStrategy *rand = new RandStrategy();
 			rand->LotteryAlgorithm();
 
 		}
+
+		//triple tens
 		else if(lottery_game == 2) {
 			AddStrategy *add = new AddStrategy();
 			add->LotteryAlgorithm();
 		}
 		else {
 			cout << "Invalid Choice, your $500 will be refunded and you can play again" << endl;
+			exit(0);
 		}
 
 
