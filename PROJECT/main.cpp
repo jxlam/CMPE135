@@ -41,9 +41,26 @@ public:
 		ifstream in("output.txt");
 		int number;	//variable to push to the vector
 
+		int choice;
+		cout << "Would you like to choose your own number or use the Quick-Pick ticket option where your number is chosen for you randomly?" << endl;
+		cout << "Press 1 to choose your own or press 2 for the Quick-Pick option." << endl;
+		cin >> choice;
+		if (choice==1){
+			cout << "What number would you like to choose from 1 - 100?"<<endl;
+			cin >> lotto_number;
+			cout << "You chose " << lotto_number << endl;
+			if (lotto_number > 100){
+				cout << "Sorry, your number is not a valid and out of the range." << endl;
+			}
+		}
+
+		if (choice==2){
+			lotto_number = rand() % 100 + 1;
+			cout << "Your lotto number is " << lotto_number << endl;
+		}
+
 		vector<int> outputs;
-		lotto_number = rand() % 100 + 1;
-		cout << "Your lotto number is " << lotto_number << endl;
+
 		//Selecting the winning number
 		winning_number = rand() % 100 + 1;
 
@@ -153,8 +170,6 @@ public:
 
 int main() {
 		srand(time(NULL));
-
-
 
 		int valid_age;
 		int ticket_purchase;
